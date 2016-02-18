@@ -1,10 +1,10 @@
 from microbit import *
 
-sec = 1
+sec = 50
 seconds = []
-mins = 0
+mins = 59
 minutes = []
-hrs = 0
+hrs = 23
 hours = []
 b = 8 #brightness
 
@@ -58,7 +58,8 @@ def fadesecs(x):
     display.set_pixel(2, 2, x)
     display.set_pixel(2, 1, x)
 
-    
+def printtime():
+    print(str(hours)+":"+str(minutes)+":"+str(seconds))
 
 binaries = [one, two, three, four, five, six, seven, eight, nine, zero]
 
@@ -78,15 +79,21 @@ while True:
             mins = 0
             if hrs % 24 == 0:
                 hrs = 0
+    seconds=str(sec)
+    minutes=str(mins)
+    hours=str(hrs)
+    printtime()
 
     if mins<10:
-        binaries[mins](4)
+        binaries[mins-1](4)
+        zero(3)
     elif mins > 9:
         minutes = [int(i) for i in str(mins)]
         binaries[minutes[0]-1](3)
         binaries[minutes[1]-1](4)
     if hrs<10:
         binaries[hrs-1](1)
+        zero(0)
     elif hrs > 9:
         hours = [int(i) for i in str(hrs)]
         binaries[hours[0]-1](0)
