@@ -1,4 +1,5 @@
-# 'BitWatch' is a Binary Watch programme written in MicroPython for the BBC Micro:bit by @petejbell and distributed under a MIT licence
+# 'BitWatch' 
+A Binary Watch programme written in MicroPython for the BBC Micro:bit by @petejbell and distributed under a MIT licence
 Please share with me what you do with it, I'd love to see what you do!
 You can find a tutorial showing you how to build a strap for your watch here: https://t.co/li9CktVJhg
 
