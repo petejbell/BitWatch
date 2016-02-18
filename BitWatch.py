@@ -63,6 +63,7 @@ def printtime():
 
 binaries = [one, two, three, four, five, six, seven, eight, nine, zero]
 
+set = False
 
 
 while True:
@@ -103,14 +104,14 @@ while True:
         if sec < 60:
             sec = 1
         sleep(100)
-    if button_a.was_pressed():
-        if hrs < 60:
+    if button_a.is_pressed():
+        if hrs < 24:
             hrs += 1
         else:
             hrs = 0
         sleep(100)
     if button_b.is_pressed():
-        if mins < 24:
+        if mins < 60:
             mins += 1
         else:
             mins = 0
